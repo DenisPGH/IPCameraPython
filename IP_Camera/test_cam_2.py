@@ -19,3 +19,8 @@ for frame in camera.capture_continuous(raw_capture, format="bgr", use_video_port
         break
 
 
+"""
+raspivid -t 0 -w 1296 -h 730 -fps 30 -b 2000000 -awb auto -n  -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=1 pt=96 ! gdppay ! tcpserversink host=0.0.0.0 port=8554
+
+raspivid -t 0 -w 1280 -h 720 -fps 30 -b 2000000 -awb auto -n -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay config-interval=1 pt=96 ! gdppay ! tcpserversink host=0.0.0.0 port=8554
+"""
