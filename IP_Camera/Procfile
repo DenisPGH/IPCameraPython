@@ -1,2 +1,4 @@
 web: gunicorn --pythonpath IP_Camera Camera.wsgi
 release: python manage.py runserver
+
+# gunicorn --bind 0.0.0.0:8000 textutils.wsgi
