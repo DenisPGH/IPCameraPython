@@ -1,0 +1,34 @@
+
+
+<h1>STREAM NOW</h1>
+<button class="on" onclick="video_on()">on</button>
+<button onclick="video_off()">off</button>
+<p id="wait" ></p>
+
+
+<img id="demo" src="" alt="start with click on">
+
+
+
+
+<script>
+function video_on() {
+  document.getElementById("demo").src = "/stream";
+  document.getElementById("wait").innerHTML = "Turning on. . . . .";
+  document.getElementById("demo").style.display = "block";
+  setTimeout(showText, 3000);
+
+}
+function showText(){
+  document.getElementById("wait").innerHTML = "Done";
+}
+
+function video_off() {
+  document.getElementById("demo").src = "";
+  document.getElementById("wait").innerHTML = "Turned off";
+  document.getElementById("demo").style.display = "none";
+}
+</script>
+
+
+
