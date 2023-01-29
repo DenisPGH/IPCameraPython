@@ -1,0 +1,2 @@
+web: gunicorn --pythonpath IP_Camera Camera.wsgi
+release: python manage.py runserver
